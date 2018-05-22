@@ -26,6 +26,8 @@ export default class VirtualList extends React.Component {
     }
 
     let end = start + 1 + visibleRowCount;
+
+    let selection = data.slice(start, end);
   }
   componentDidUpdate() {
     this.resize();
