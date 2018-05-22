@@ -4,7 +4,30 @@ export default class VirtualList extends React.Component {
   new = 0;
   old = 0;
   state = { selection: [], start: 0 };
-  handleScroll = () => {};
+  handleScroll = () => {
+    var offset = this.base.scrollTop;
+
+    const { rowHeight, overscanCount, data } = this.props;
+    const { height } = this.state;
+
+    let start = (offset / rowHeight) | 0;
+
+    let visibleRowCount = (height / rowHeight) | 0;
+
+    if (overscanCount) {
+      start = Math.max(0, start - start % overscanCount);
+      visibleRowCount += overscanCount;
+    }
+
+    let end = start + 1 + visibleRowCount;
+
+    this.old = this.new;
+
+    this.new = start * rowHeight;
+
+    let selection = data.slice(start, end);
+    this.setState({ start, selection });
+  };
   resize = () => {
     if (this.state.height !== this.base.offsetHeight) {
       this.setState({ height: this.base.offsetHeight });
