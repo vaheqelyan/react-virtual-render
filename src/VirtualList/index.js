@@ -3,6 +3,9 @@ import React from "react";
 export default class VirtualList extends React.Component {
   handleScroll = () => {};
   componentDidMount() {}
+  componentDidUpdate() {
+    this.resize();
+  }
   render() {
     const { renderRow } = this.props;
     return (
