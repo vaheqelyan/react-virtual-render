@@ -13,7 +13,7 @@ export default class VirtualList extends React.Component {
 
     var offset = this.base.scrollTop;
 
-    const { rowHeight, overscanCount } = this.props;
+    const { rowHeight, overscanCount, data } = this.props;
     const { height } = this.state;
 
     let start = (offset / rowHeight) | 0;
