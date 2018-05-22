@@ -1,7 +1,7 @@
 {
   "name": "react-virtual-render",
   "version": "1.0.0",
-  "main": "./build/rvr-virtual-list.js",
+  "main": "build/rvr-virtual-list.js",
   "repository": "https://github.com/vaheqelyan/react-virtual-render.git",
   "author": "Vahe <martinkenner@mail.com>",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "dev": "rollup -c -w",
     "build": "rollup -c"
   },
-  "files": ["./build/rvr-virtual-list.js"],
+  "files": ["build/rvr-virtual-list.js"],
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
