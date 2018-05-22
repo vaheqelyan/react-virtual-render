@@ -46,7 +46,7 @@ export default class HorizontalList extends React.Component {
 
     const { rowWidth, overscanCount, data } = this.props;
     const { width } = this.state;
-    const offset = this.base.scrollTop;
+    const offset = this.base.scrollLeft;
     let start = (offset / rowWidth) | 0;
 
     let visibleRowCount = (width / rowWidth) | 0;
