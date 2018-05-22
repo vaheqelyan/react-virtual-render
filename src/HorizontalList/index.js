@@ -10,6 +10,10 @@ export default class HorizontalList extends React.Component {
     }
   };
 
+  componentWillUnmount() {
+    this.base.removeEventListener("resize", this.resize);
+  }
+
   setBase = node => (this.base = node);
 
   render() {
