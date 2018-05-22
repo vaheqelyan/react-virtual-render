@@ -1,6 +1,9 @@
 import React from "react";
 
 export default class HorizontalList extends React.Component {
+  new = 0;
+  old = 0;
+  state = { width: 0, selection: 0 };
   resize = () => {
     if (this.state.width !== this.base.offsetWidth) {
       this.setState({ width: this.base.offsetWidth });
