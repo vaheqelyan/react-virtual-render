@@ -2,6 +2,7 @@ import React from "react";
 
 export default class VirtualList extends React.Component {
   handleScroll = () => {};
+  resize = () => {};
   componentDidMount() {}
   componentDidUpdate() {
     this.resize();
