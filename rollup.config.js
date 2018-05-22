@@ -34,7 +34,7 @@ export default [
     input: "./src/HorizontalList/index.js",
     name: "RVRHorizontalList",
     output: {
-      file: "build/rvr-virtual-list.js",
+      file: "build/rvr-horizontal-list.js",
       format: "umd"
     },
     plugins: [
