@@ -32,7 +32,7 @@ export default class HorizontalList extends React.Component {
     let end = start + 1 + visibleRowCount;
     let selection = data.slice(start, end);
 
-    this.setState({ start: start, selection: selection, end: end });
+    this.setState({ start: start, selection: selection });
 
     this.base.addEventListener("resize", this.resize);
   }
