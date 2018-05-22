@@ -35,7 +35,7 @@ export default class HorizontalList extends React.Component {
     this.new = start * rowWidth;
 
     if (this.new !== this.old) {
-      this.setState({ start: start, selection: selection, end: end });
+      this.setState({ start: start, selection: selection });
     }
   };
 
