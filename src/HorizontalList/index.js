@@ -16,7 +16,10 @@ export default class HorizontalList extends React.Component {
 
     return (
       <div onScroll={this.handleScroll} {...props}>
-        <div style={`width:${data.length * rowWidth}px;`}>
+        <div style={{			position: 'relative',
+			overflow: 'hidden',
+			width: "100%",
+			minHeight: 100%,width:`${data.length * rowWidth}px`}}>
           <div style={`left:${start * rowWidth}px;`}>
             <div class="pan">{selection.map(renderRow)}</div>
             {renderer(selection)}
