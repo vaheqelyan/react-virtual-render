@@ -3,7 +3,7 @@ import React from "react";
 export default class VirtualList extends React.Component {
   new = 0;
   old = 0;
-  state = { selection: [], start: 0 };
+  state = { selection: [], start: 0, height: 0 };
   handleScroll = () => {
     var offset = this.base.scrollTop;
 
@@ -107,5 +107,6 @@ export default class VirtualList extends React.Component {
 VirtualList.defaultProps = {
   overscanCount: 10,
   data: [],
-  rowHeight: 0
+  rowHeight: 0,
+  height: 0
 };
