@@ -3,6 +3,7 @@ import React from "react";
 export default class VirtualList extends React.Component {
   new = 0;
   old = 0;
+  state = { selection: [], start: 0 };
   handleScroll = () => {};
   resize = () => {
     if (this.state.height !== this.base.offsetHeight) {
