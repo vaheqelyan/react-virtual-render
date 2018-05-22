@@ -25,7 +25,17 @@ export default class HorizontalList extends React.Component {
             width: `${data.length * rowWidth}px`
           }}
         >
-          <div style={`left:${start * rowWidth}px;`}>
+          <div
+            style={{
+              position: "absolute",
+              top: "0",
+              left: "0",
+              height: "100%",
+              width: "100%",
+              overflow: "visible",
+              left: `${start * rowWidth}px`
+            }}
+          >
             <div class="pan">{selection.map(renderRow)}</div>
             {renderer(selection)}
           </div>
