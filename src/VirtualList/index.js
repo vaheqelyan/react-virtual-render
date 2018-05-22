@@ -105,5 +105,6 @@ export default class VirtualList extends React.Component {
 }
 
 VirtualList.defaultProps = {
-  overscanCount: 10
+  overscanCount: 10,
+  data: []
 };
