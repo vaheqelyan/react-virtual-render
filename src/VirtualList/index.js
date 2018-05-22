@@ -36,6 +36,7 @@ export default class VirtualList extends React.Component {
     this.new = start * rowHeight;
 
     if (this.new !== this.old) {
+      let selection = data.slice(start, end);
       this.setState({ start, selection });
     }
   }
