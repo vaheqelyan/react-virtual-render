@@ -13,7 +13,7 @@ export default class HorizontalList extends React.Component {
     const { offset, rowWidth, selection, start, data, renderRow } = props;
 
     return (
-      <div onScroll={this.handleScroll} {...props}>
+      <div onScroll={handleScroll} {...props}>
         <div
           style={{
             position: "relative",
