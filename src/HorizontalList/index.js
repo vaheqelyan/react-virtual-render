@@ -44,3 +44,9 @@ export default class HorizontalList extends React.Component {
     );
   }
 }
+
+HorizontalList.defaultProps = {
+  selection: [],
+  rowWidth: 0,
+  overscanCount: 10
+};
