@@ -12,7 +12,7 @@ export default class HorizontalList extends React.Component {
     { offset = 0, width = 0, selection = [], start = 0 }
   ) {
     const { props } = this;
-    const { offset, rowWidth, selection, start, data } = props;
+    const { offset, rowWidth, selection, start, data, renderRow } = props;
 
     return (
       <div onScroll={this.handleScroll} {...props}>
