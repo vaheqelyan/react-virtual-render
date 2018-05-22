@@ -36,7 +36,7 @@ export default class VirtualList extends React.Component {
     this.new = start * rowHeight;
 
     if (this.new !== this.old) {
-      this.setState({ start: start });
+      this.setState({ start });
     }
   }
   componentDidUpdate() {
