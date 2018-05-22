@@ -4,6 +4,33 @@ import babel from "rollup-plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import alias from "rollup-plugin-alias";
 export default [
+  /* React virtual render */
+  {
+    input: "./src/index.js",
+    name: "ReactVirtualRender",
+    output: {
+      file: "build/react-virtual-render.js",
+      format: "umd"
+    },
+    plugins: [
+      babel({ exclude: "node_modules/**" }),
+      resolve({
+        jsnext: true,
+        main: true
+      }),
+      commonjs({
+        include: "node_modules/**"
+      }),
+      alias({
+        react: "./node_modules/react/umd/react.development.js"
+      })
+    ],
+    external: ["react"],
+    globals: {
+      react: "React"
+    }
+  },
+  /* Virtual List ( Vertical ) */
   {
     input: "./src/VirtualList/index.js",
     name: "RVRVirtualList",
