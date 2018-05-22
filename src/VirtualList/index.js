@@ -71,7 +71,8 @@ export default class VirtualList extends React.Component {
               left: 0,
               height: "100%",
               width: "100%",
-              overflow: "visible"
+              overflow: "visible",
+              top: `${start * rowHeight}px`
             }}
           >
             {renderRow(start, end)}
