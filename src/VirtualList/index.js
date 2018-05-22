@@ -96,7 +96,7 @@ export default class VirtualList extends React.Component {
               top: `${start * rowHeight}px`
             }}
           >
-            {renderRow(start, end)}
+            {selection.map(renderRow)}
           </div>
         </div>
       </div>
