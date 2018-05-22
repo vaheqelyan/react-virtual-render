@@ -49,7 +49,7 @@ export default class VirtualList extends React.Component {
     this.base.removeEventListener("resize", this.resize);
   }
   render() {
-    const { handleScroll, props, setBase } = this;
+    const { handleScroll, props, setBase, state } = this;
     const { renderRow } = props;
     return (
       <div ref={setBase} onScroll={handleScroll} {...props}>
