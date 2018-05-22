@@ -71,7 +71,11 @@ export default class VirtualList extends React.Component {
   }
   render() {
     const { handleScroll, props, setBase, state } = this;
-    const { renderRow, data, rowHeight } = props;
+    const { renderRow, data, rowHeight,constructor(props) {
+      super(props);
+      
+    }
+     } = props;
     const { selection, start } = state;
 
     return (
