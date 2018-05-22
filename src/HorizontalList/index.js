@@ -7,10 +7,7 @@ export default class HorizontalList extends React.Component {
     }
   };
 
-  render(
-    { data, rowWidth, renderRow, renderer, overscanCount = 10, sync, ...props },
-    { offset = 0, width = 0, selection = [], start = 0 }
-  ) {
+  render() {
     const { props, state } = this;
     const { start, selection } = state;
     const { offset, rowWidth, selection, start, data, renderRow } = props;
