@@ -10,6 +10,8 @@ export default class VirtualList extends React.Component {
   componentDidMount() {
     this.resize();
     this.base.addEventListener("resize", this.resize);
+
+    var offset = this.base.scrollTop;
   }
   componentDidUpdate() {
     this.resize();
