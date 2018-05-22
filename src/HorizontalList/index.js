@@ -37,7 +37,6 @@ export default class HorizontalList extends React.Component {
             }}
           >
             <div class="pan">{selection.map(renderRow)}</div>
-            {renderer(selection)}
           </div>
         </div>
       </div>
