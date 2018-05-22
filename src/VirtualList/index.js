@@ -15,6 +15,8 @@ export default class VirtualList extends React.Component {
 
     const { rowHeight, overscanCount } = this.props;
     const { height } = this.state;
+
+    let start = (offset / rowHeight) | 0;
   }
   componentDidUpdate() {
     this.resize();
