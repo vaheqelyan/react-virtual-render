@@ -9,7 +9,7 @@
     "dev": "rollup -c -w",
     "build": "rollup -c"
   },
-  "files": ["build/rvr-virtual-list.js"],
+  "files": ["build/rvr-virtual-list.js", "build/rvr-horizontal-list.js.js"],
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
