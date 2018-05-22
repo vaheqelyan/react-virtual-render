@@ -24,6 +24,8 @@ export default class VirtualList extends React.Component {
       start = Math.max(0, start - start % overscanCount);
       visibleRowCount += overscanCount;
     }
+
+    let end = start + 1 + visibleRowCount;
   }
   componentDidUpdate() {
     this.resize();
