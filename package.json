@@ -1,6 +1,6 @@
 {
   "name": "react-virtual-render",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "build/rvr-virtual-list.js",
   "repository": "https://github.com/vaheqelyan/react-virtual-render.git",
   "author": "Vahe <martinkenner@mail.com>",
