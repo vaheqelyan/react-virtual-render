@@ -4,6 +4,7 @@ export default class VirtualList extends React.Component {
   handleScroll = () => {};
   componentDidMount() {}
   render() {
+    const { renderRow } = this.props;
     return (
       <div onScroll={this.handleScroll} {...props}>
         <div style={`${STYLE_INNER} height:${data * rowHeight}px;`}>
