@@ -12,7 +12,7 @@ export default class VirtualList extends React.Component {
     this.resize();
   }
   componentWillUnmount() {
-    removeEventListener("resize", this.resize);
+    this.base.removeEventListener("resize", this.resize);
   }
   render() {
     const { renderRow } = this.props;
