@@ -82,7 +82,7 @@ export default class VirtualList extends React.Component {
             overflow: "hidden",
             width: "100%",
             minHeight: "100%",
-            height: `${data * rowHeight}px`
+            height: `${data.length * rowHeight}px`
           }}
         >
           <div
