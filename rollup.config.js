@@ -31,8 +31,8 @@ export default [
   },
   /* HorizontalList */
   {
-    input: "./src/VirtualList/index.js",
-    name: "RVRVirtualList",
+    input: "./src/HorizontalList/index.js",
+    name: "RVRHorizontalList",
     output: {
       file: "build/rvr-virtual-list.js",
       format: "umd"
