@@ -17,6 +17,15 @@ export default class VirtualList extends React.Component {
     const { height } = this.state;
 
     let start = (offset / rowHeight) | 0;
+
+    let visibleRowCount = (height / rowHeight) | 0;
+
+    // Overscan: render blocks of rows modulo an overscan row count
+    // This dramatically reduces DOM writes during scrolling
+    if (overscanCount) {
+      start = Math.max(0, start - start % overscanCount);
+      visibleRowCount += overscanCount;
+    }
   }
   componentDidUpdate() {
     this.resize();
