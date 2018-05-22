@@ -33,7 +33,7 @@ export default class HorizontalList extends React.Component {
 
     this.setState({ start: start, selection: selection, end: end });
 
-    addEventListener("resize", this.resize);
+    this.base.addEventListener("resize", this.resize);
   }
   componentWillUnmount() {
     this.base.removeEventListener("resize", this.resize);
