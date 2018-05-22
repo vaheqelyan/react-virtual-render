@@ -8,7 +8,7 @@ export default class HorizontalList extends React.Component {
   };
 
   render() {
-    const { props, state, handleScroll } = this;
+    const { props, state, handleScroll, setBase } = this;
     const { start, selection } = state;
     const { offset, rowWidth, selection, start, data, renderRow } = props;
 
