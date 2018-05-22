@@ -7,7 +7,10 @@ export default class VirtualList extends React.Component {
       this.setState({ height: this.base.offsetHeight });
     }
   };
-  componentDidMount() {}
+  componentDidMount() {
+    this.resize();
+    this.base.addEventListener("resize", this.resize);
+  }
   componentDidUpdate() {
     this.resize();
   }
