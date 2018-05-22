@@ -10,6 +10,31 @@ export default class HorizontalList extends React.Component {
     }
   };
 
+  componentDidUpdate() {
+    this.resize();
+  }
+
+  componentDidMount() {
+    this.resize();
+
+    const { rowWidth, overscanCount, data } = this.props;
+    const { width } = this.state;
+    let start = (this.state.offset / rowWidth) | 0;
+
+    let visibleRowCount = (width / rowWidth) | 0;
+
+    if (overscanCount) {
+      start = Math.max(0, start - start % overscanCount);
+      visibleRowCount += overscanCount;
+    }
+
+    let end = start + 1 + visibleRowCount;
+    let selection = data.slice(start, end);
+
+    this.setState({ start: start, selection: selection, end: end });
+
+    addEventListener("resize", this.resize);
+  }
   componentWillUnmount() {
     this.base.removeEventListener("resize", this.resize);
   }
