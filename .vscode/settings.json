@@ -2,5 +2,7 @@
   "editor.formatOnSave": true,
   "editor.fontSize": 18,
   "editor.lineNumbers": "off",
-  "prettier.printWidth": 110
+  "prettier.printWidth": 110,
+  "tslint.enable": true,
+  "eslint.enable": false
 }
