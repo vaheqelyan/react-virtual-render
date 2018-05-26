@@ -1,6 +1,8 @@
 # Build folder 
 build/
 
+.rpt2_cache/
+
 # Logs
 logs
 *.log
