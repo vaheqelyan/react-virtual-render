@@ -1,6 +1,6 @@
 {
   "name": "react-virtual-render",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "build/react-virtual-render.js",
   "repository": "https://github.com/vaheqelyan/react-virtual-render.git",
   "author": "Vahe <martinkenner@mail.com>",
