@@ -5,7 +5,8 @@
   "rules": {
     "object-literal-sort-keys": false,
     "trailing-comma": false,
-    "no-bitwise": false
+    "no-bitwise": false,
+    "semicolon": ["ignore-bound-class-methods"]
   },
   "rulesDirectory": []
 }
