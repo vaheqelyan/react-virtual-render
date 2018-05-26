@@ -1,80 +1,23 @@
 // rollup.config.js
-import resolve from "rollup-plugin-node-resolve";
-import babel from "rollup-plugin-babel";
-import commonjs from "rollup-plugin-commonjs";
+// import resolve from "rollup-plugin-node-resolve";
+// import babel from "rollup-plugin-babel";
+// import commonjs from "rollup-plugin-commonjs";
 import alias from "rollup-plugin-alias";
+import typescript from "rollup-plugin-typescript2";
+
 export default [
-  /* React virtual render */
   {
-    input: "./src/index.js",
-    name: "ReactVirtualRender",
+    input: "./src/index.ts",
     output: {
-      file: "build/react-virtual-render.js",
-      format: "umd"
+      file: "./build/react-virtual-render.js",
+      format: "umd",
+      name: "ReactVirtualRender"
     },
+
     plugins: [
-      babel({ exclude: "node_modules/**" }),
-      resolve({
-        jsnext: true,
-        main: true
-      }),
-      commonjs({
-        include: "node_modules/**"
-      }),
+      typescript(/*{ plugin options }*/),
       alias({
-        react: "./node_modules/react/umd/react.development.js"
-      })
-    ],
-    external: ["react"],
-    globals: {
-      react: "React"
-    }
-  },
-  /* Virtual List ( Vertical ) */
-  {
-    input: "./src/VirtualList/index.js",
-    name: "RVRVirtualList",
-    output: {
-      file: "build/rvr-virtual-list.js",
-      format: "umd"
-    },
-    plugins: [
-      babel({ exclude: "node_modules/**" }),
-      resolve({
-        jsnext: true,
-        main: true
-      }),
-      commonjs({
-        include: "node_modules/**"
-      }),
-      alias({
-        react: "./node_modules/react/umd/react.development.js"
-      })
-    ],
-    external: ["react"],
-    globals: {
-      react: "React"
-    }
-  },
-  /* HorizontalList */
-  {
-    input: "./src/HorizontalList/index.js",
-    name: "RVRHorizontalList",
-    output: {
-      file: "build/rvr-horizontal-list.js",
-      format: "umd"
-    },
-    plugins: [
-      babel({ exclude: "node_modules/**" }),
-      resolve({
-        jsnext: true,
-        main: true
-      }),
-      commonjs({
-        include: "node_modules/**"
-      }),
-      alias({
-        react: "./node_modules/react/umd/react.development.js"
+        react: "node_modules/react/umd/react.development.js"
       })
     ],
     external: ["react"],
