@@ -9,10 +9,6 @@
     "dev": "rollup -c -w",
     "build": "rollup -c"
   },
-  "files": [
-    "build/rvr-virtual-list.js",
-    "build/rvr-horizontal-list.js"
-  ],
   "devDependencies": {
     "@types/react": "^16.3.14",
     "react": "^16.3.2",
